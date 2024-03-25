@@ -62,7 +62,11 @@ async function createProductIfNotExists(product) {
 }
 
 async function getAllProducts() {
-  return products;
+  try {
+    return await productsDatabase.findAll();
+  } catch (error) {
+    console.error('Error fetching products:', error);
+  }
 }
 
 module.exports = {
