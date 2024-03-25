@@ -25,6 +25,11 @@ function loadProducts() {
   });
 }
 
+async function getAllProducts() {
+  return products;
+}
+
 module.exports = {
   loadProducts,
+  getAllProducts,
 };
