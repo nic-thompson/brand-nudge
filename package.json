@@ -4,6 +4,9 @@
   "description": "API and SPA for visualising product information",
   "main": "index.js",
   "scripts": {
+    "server": "npm run watch --prefix server",
+    "client": "npm start --prefix client",
+    "watch": "npm run server & npm run client",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
