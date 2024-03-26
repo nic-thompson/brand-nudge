@@ -1,11 +1,14 @@
 const path = require('path');
-const express = require('express');
 const morgan = require('morgan');
-var rfs = require('rotating-file-stream');
+const express = require('express');
+const helmet = require('helmet');
+const rfs = require('rotating-file-stream');
 
 const productsRouter = require('./routes/products/products.router');
 
 const app = express();
+
+app.use(helmet());
 
 var accessLogStream = rfs.createStream('access.log', {
   interval: '1d',
