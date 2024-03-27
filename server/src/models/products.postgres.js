@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const { sequelize } = require('../services/postgres'); // Assuming you have a Sequelize connection instance
+const { sequelize } = require('../services/postgres');
 
 const Product = sequelize.define(
   'product',
@@ -15,7 +15,7 @@ const Product = sequelize.define(
     ean: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true, // Assuming EAN is a unique identifier
+      unique: true,
     },
     category: {
       type: DataTypes.STRING,
@@ -35,16 +35,16 @@ const Product = sequelize.define(
     },
     image_url: {
       type: DataTypes.STRING,
-      allowNull: true, // Assuming Image may be null if not provided
+      allowNull: true,
     },
     on_promotion: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
-      defaultValue: false, // Default value is false
+      defaultValue: false,
     },
     promotion_description: {
       type: DataTypes.STRING,
-      allowNull: true, // Assuming PromotionDescription may be null if not provided
+      allowNull: true,
     },
     base_price: {
       type: DataTypes.DECIMAL(10, 2),
@@ -56,11 +56,10 @@ const Product = sequelize.define(
     },
     promoted_price: {
       type: DataTypes.DECIMAL(10, 2),
-      allowNull: true, // Assuming PromotedPrice may be null if not on promotion
+      allowNull: true,
     },
   },
   { timestamps: false }
 );
 
-// Exporting the Product model
 module.exports = Product;
