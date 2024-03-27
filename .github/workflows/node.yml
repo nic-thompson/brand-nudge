@@ -11,6 +11,9 @@ jobs:
       CLIENT_ID: ${{ secrets.CLIENT_ID }}
       CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
       POPULATE_DB: ${{ secrets.POPULATE_DB }}
+      POSTGRES_DATABASE: ${{ secrets.POSTGRES_DATABASE }}
+      POSTGRES_USERNAME: ${{ secrets.POSTGRES_USERNAME }}
+      POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
