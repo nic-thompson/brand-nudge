@@ -10,6 +10,7 @@ jobs:
       CI: true
       CLIENT_ID: ${{ secrets.CLIENT_ID }}
       CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+      POPULATE_DB: ${{ secrets.POPULATE_DB }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
