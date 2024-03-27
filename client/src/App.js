@@ -1,4 +1,4 @@
-import logo from './brand_nudge_logo.jpeg';
+import logo from './brand_nudge_logo.jpg';
 import './App.css';
 
 function App() {
