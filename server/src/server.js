@@ -19,7 +19,12 @@ const server = https.createServer(
 
 async function startServer() {
   await postgresConnection();
-  // await loadProducts();
+
+  if (process.env.POPULATE_DB === 'true') {
+    console.log('Loading products...');
+    await loadProducts();
+  }
+
   server.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
   });
