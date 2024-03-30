@@ -5,7 +5,7 @@ const https = require('https');
 const app = require('./app');
 
 const { loadProducts } = require('./models/products.model');
-const { postgresConnection } = require('./services/postgres');
+const { postgresConnection, sequelize } = require('./services/postgres');
 
 const PORT = process.env.PORT || 8000;
 
@@ -19,6 +19,7 @@ const server = https.createServer(
 
 async function startServer() {
   await postgresConnection();
+  await sequelize.sync({ force: true });
 
   if (process.env.POPULATE_DB === 'true') {
     console.log('Loading products...');
