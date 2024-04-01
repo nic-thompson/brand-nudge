@@ -1,6 +1,7 @@
 const path = require('path');
 const morgan = require('morgan');
 const express = require('express');
+const cors = require('cors');
 const helmet = require('helmet');
 const rfs = require('rotating-file-stream');
 const passport = require('passport');
@@ -11,6 +12,7 @@ require('dotenv').config();
 
 const app = express();
 
+app.use(cors());
 app.use(helmet());
 
 const config = {
