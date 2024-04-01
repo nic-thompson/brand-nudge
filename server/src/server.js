@@ -19,7 +19,6 @@ const server = http.createServer(
 
 async function startServer() {
   await postgresConnection();
-  // await sequelize.sync({ force: true });
 
   if (process.env.POPULATE_DB === 'true') {
     console.log('Loading products...');
