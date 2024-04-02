@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div>
       <p>
-        <Link to="/products" className="App-link">
+        <Link to="/products" className="center">
           VIEW PRODUCTS
         </Link>
       </p>

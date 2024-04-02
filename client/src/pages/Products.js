@@ -4,7 +4,7 @@ const Products = (props) => {
   const { products } = props;
 
   if (!products.length) {
-    return <>Loading...</>;
+    return <div className="center">Loading...</div>;
   }
 
   return (

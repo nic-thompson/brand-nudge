@@ -8,6 +8,7 @@ body {
   background: linear-gradient(45deg, #49a09d, #5f2c82);
   font-family: sans-serif;
   font-weight: 100;
+  color: #fff;
 }
 .container {
   position: absolute;
@@ -54,4 +55,14 @@ tbody td:hover:before {
   bottom: -9999px;
   background-color: rgba(255, 255, 255, 0.2);
   z-index: -1;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
 }

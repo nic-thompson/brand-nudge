@@ -10,7 +10,7 @@ const Table = (props) => {
         accessor,
         Header: accessor.toUpperCase(),
       })),
-    []
+    [products]
   );
 
   const data = React.useMemo(
@@ -22,7 +22,7 @@ const Table = (props) => {
         }
         return row;
       }),
-    []
+    [products]
   );
 
   const { getTableProps, headerGroups, rows, prepareRow } = useTable({
