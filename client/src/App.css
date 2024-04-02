@@ -66,3 +66,28 @@ tbody td:hover:before {
 a {
   text-decoration: none;
 }
+
+.select {
+  padding: 10px;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.center_nav {
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  margin: 0 10px;
+  color: rgb(197, 197, 235);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: rgb(170, 214, 241);
+}
