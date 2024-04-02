@@ -4,7 +4,6 @@ const app = require('../../app');
 describe('Products API', () => {
   beforeAll(async () => {
     await require('../../services/postgres').postgresConnection();
-    await require('../../services/postgres').sequelize.sync({ force: true });
   });
   afterAll(async () => {
     await require('../../services/postgres').sequelize.close();
