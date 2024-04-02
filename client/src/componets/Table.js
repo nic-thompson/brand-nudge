@@ -25,11 +25,10 @@ const Table = (props) => {
     []
   );
 
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    useTable({
-      columns,
-      data,
-    });
+  const { getTableProps, headerGroups, rows, prepareRow } = useTable({
+    columns,
+    data,
+  });
 
   return (
     <div className="container">
