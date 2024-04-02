@@ -5,8 +5,7 @@ const morgan = require('morgan');
 const express = require('express');
 const rfs = require('rotating-file-stream');
 
-require('dotenv').config();
-
+const api = require('./routes/api');
 const app = express();
 
 app.use(cors());
@@ -22,9 +21,7 @@ app.use(morgan('combined', { stream: accessLogStream }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
-const productsRouter = require('./routes/products/products.router');
-
-app.use('/products', productsRouter);
+app.use('/v1', api);
 
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));

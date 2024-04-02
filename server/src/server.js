@@ -2,6 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const http = require('http');
 
+require('dotenv').config();
+
 const app = require('./app');
 
 const { loadProducts } = require('./models/products.model');
