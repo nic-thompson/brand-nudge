@@ -9,7 +9,14 @@ const api = require('./routes/api');
 const app = express();
 
 app.use(cors());
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      useDefaults: true,
+      directives: { 'script-src': ["'self'", 'https://www.gstatic.com'] },
+    },
+  })
+);
 
 var accessLogStream = rfs.createStream('access.log', {
   interval: '1d',
