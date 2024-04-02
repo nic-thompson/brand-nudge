@@ -1,13 +1,9 @@
-import { Link } from 'react-router-dom';
+import Navbar from '../componets/Navbar';
 
 const Home = () => {
   return (
     <div>
-      <p>
-        <Link to="/products" className="center">
-          VIEW PRODUCTS
-        </Link>
-      </p>
+      <Navbar />
     </div>
   );
 };
